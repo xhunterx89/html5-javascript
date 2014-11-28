@@ -25,7 +25,9 @@ Hình ảnh động trong HTML5
 Về cơ bản, việc thực hiện hình ảnh động rất đơn giản: Bạn vẽ nhiều lần một chuỗi các hình ảnh để làm cho nó xuất hiện như thể các đối tượng đang hoạt động theo một cách nào đó. Điều đó có nghĩa là bạn phải thực hiện một vòng lặp để vẽ một hình ảnh theo định kỳ.
 
 Theo truyền thống, các vòng lặp hình ảnh động đã được thực hiện trong JavaScript bằng setTimeout() hoặc bằng setInterval():
+
 Thực hiện các hình ảnh động bằng setInterval()
+
 setInterval( function (e) { // Don't do this for time-critical animations
    animate();               // A function that draws the current animation frame
 }, 1000 / 60);              // Approximately 60 frames/second (fps)
@@ -40,7 +42,9 @@ Có một nhược điểm thậm chí còn nghiêm trọng hơn với việc s�
 requestAnimationFrame()
 
 Trong đặc tả Kiểm soát định thời gian cho hình ảnh động dựa trên kịch bản lệnh (xem phần Tài nguyên), W3C định nghĩa một phương thức dựa trên đối tượng window có tên là requestAnimationFrame(). Không giống như setTimeout() hay setInterval(), phương thức requestAnimationFrame() đặc biệt được dành cho việc thực hiện hình ảnh động. Do đó, nó không bị một nhược điểm nào liên quan đến setTimeout() và setInterval(). Nó cũng dễ sử dụng:
+
 Thực hiện hình ảnh động bằng requestAnimationFrame()
+
 function animate(time) {           // Animation loop
    draw(time);                     // A function that draws the current animation frame
    requestAnimationFrame(animate); // Keep the animation going
