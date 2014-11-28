@@ -28,9 +28,11 @@ Theo truyền thống, các vòng lặp hình ảnh động đã được thực
 
 Thực hiện các hình ảnh động bằng setInterval()
 
+<code>
 setInterval( function (e) { // Don't do this for time-critical animations
    animate();               // A function that draws the current animation frame
 }, 1000 / 60);              // Approximately 60 frames/second (fps)
+</code>
 
 Không bao giờ sử dụng setTimeout() hay setInterval() cho các hình ảnh động hạn chế thời gian.
 setInterval chắc chắn sẽ tạo ra một hình ảnh động bằng cách liên tục gọi một hàm animate() để vẽ khung hình của hình ảnh động tiếp theo; tuy nhiên, bạn có thể không hài lòng với các kết quả đó, vì setInterval() và setTimeout() không biết gì về hình ảnh động. (Lưu ý: Bạn phải thực hiện hàm animate(); nó không phải là một phần của API Canvas).
@@ -45,10 +47,12 @@ Trong đặc tả Kiểm soát định thời gian cho hình ảnh động dựa
 
 Thực hiện hình ảnh động bằng requestAnimationFrame()
 
+<code>
 function animate(time) {           // Animation loop
    draw(time);                     // A function that draws the current animation frame
    requestAnimationFrame(animate); // Keep the animation going
 };
+</code>
 
 requestAnimationFrame(animate);    // Start the animation
 Bạn chuyển cho phương thức requestAnimationFrame() một tài liệu tham khảo đến một hàm gọi lại và khi trình duyệt đã sẵn sàng vẽ khung hình ảnh động tiếp theo, nó gọi hàm gọi lại này. Để duy trì hình ảnh động, hàm gọi lại cũng gọi phương thức requestAnimationFrame().
