@@ -29,9 +29,12 @@ Theo truyền thống, các vòng lặp hình ảnh động đã được thực
 Thực hiện các hình ảnh động bằng setInterval()
 
 <code>
-setInterval( function (e) { // Don't do this for time-critical animations
-   animate();               // A function that draws the current animation frame
-}, 1000 / 60);              // Approximately 60 frames/second (fps)
+setInterval( function (e) {
+
+   animate();
+   
+}, 1000 / 60);
+
 </code>
 
 Không bao giờ sử dụng setTimeout() hay setInterval() cho các hình ảnh động hạn chế thời gian.
@@ -48,9 +51,12 @@ Trong đặc tả Kiểm soát định thời gian cho hình ảnh động dựa
 Thực hiện hình ảnh động bằng requestAnimationFrame()
 
 <code>
-function animate(time) {           // Animation loop
-   draw(time);                     // A function that draws the current animation frame
-   requestAnimationFrame(animate); // Keep the animation going
+function animate(time) {
+
+   draw(time);
+   
+   requestAnimationFrame(animate);
+   
 };
 </code>
 
