@@ -1,11 +1,19 @@
 Tổng quan ngắn gọn về API 2D Canvas (Canvas 2D API). 
+
 Các phương thức bối cảnh 2D của Canvas:
+
 Phương thức	Mô tả
+
 drawImage()	Vẽ tất cả hoặc một phần của một hình ảnh tại một vị trí cụ thể trong một canvas. Cũng có thể vẽ một canvas khác hoặc một khung hình từ một phần tử video.
+
 save()	Lưu các thuộc tính bối cảnh vào một ngăn xếp.
+
 restore()	Lấy các thuộc tính bối cảnh ra khỏi ngăn xếp và áp dụng chúng vào bối cảnh đó.
+
 strokeRect()	Vẽ một hình chữ nhật rỗng.
+
 fillRect()	Vẽ một hình chữ nhật đặc (được tô kín).
+
 translate()	Chuyển dịch hệ tọa độ. Đây là một phương thức mạnh, có ích trong nhiều tình huống khác nhau.
 
 Hàm drawRunner() chuyển ba đối số cho phương thức drawImage(): một hình ảnh và các tọa độ trái và tọa độ đỉnh để vẽ hình ảnh trong canvas ở đó. Tọa độ trái là một hằng số, trong khi tọa độ đỉnh được xác định bởi bậc thềm có nhân vật đang chạy ở trên đó.
